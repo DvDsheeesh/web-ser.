@@ -12,7 +12,7 @@ function moveCar(event) {
             }
             break;
         case "W":
-            if (carPosition.y > 0) {
+            if (carPosition.y > 1) {
                 carPosition.y -= 2*moveDistance;
             }
             break;
@@ -22,7 +22,7 @@ function moveCar(event) {
             }
             break;
         case "S":
-                if (carPosition.y < 2*(gameArea.clientHeight - car.clientHeight)) {
+                if (carPosition.y < gameArea.clientHeight - car.clientHeight - 1) {
                     carPosition.y += 2*moveDistance;
                 }
                 break;
