@@ -49,7 +49,7 @@ function moveCar(event) {
             if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
                 carPosition.x += moveDistance;
             }
-        case "S":
+        case "D":
             if (carPosition.x < gameArea.clientWidth - car.clientWidth - moveDistance) {
                 carPosition.x += 2*moveDistance;
             }
