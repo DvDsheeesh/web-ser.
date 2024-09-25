@@ -25,9 +25,12 @@ function moveCar(event) {
             }
             break;
         case "S":
-                if (carPosition.y < gameArea.clientHeight - car.clientHeight - 10) {
-                    carPosition.y += 2*moveDistance;
-                }
+            if (carPosition.y < gameArea.clientHeight - car.clientHeight - moveDistance) {
+                carPosition.y += 2*moveDistance;
+            }
+            else if (carPosition.y < gameArea.clientHeight - car.clientHeight - 0) {
+                carPosition.y += moveDistance;
+            }
                 break;
         case "a":
             if (carPosition.x > 0) {
