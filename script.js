@@ -6,22 +6,22 @@ const gameArea = document.getElementById("game-area");
 // Function to move the car
 function moveCar(event) {
     switch (event.key) {
-        case "ArrowUp":
+        case "w":
             if (carPosition.y > 0) {
                 carPosition.y -= moveDistance;
             }
             break;
-        case "ArrowDown":
+        case "s":
             if (carPosition.y < gameArea.clientHeight - car.clientHeight) {
                 carPosition.y += moveDistance;
             }
             break;
-        case "ArrowLeft":
+        case "a":
             if (carPosition.x > 0) {
                 carPosition.x -= moveDistance;
             }
             break;
-        case "ArrowRight":
+        case "d":
             if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
                 carPosition.x += moveDistance;
             }
