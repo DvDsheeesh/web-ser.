@@ -12,8 +12,11 @@ function moveCar(event) {
             }
             break;
         case "W":
-            if (carPosition.y > 10) {
+            if (carPosition.y > moveDistance) {
                 carPosition.y -= 2*moveDistance;
+            }
+            else if (carPosition.y > 0){
+                carPosition.y -= moveDistance;
             }
             break;
         case "s":
