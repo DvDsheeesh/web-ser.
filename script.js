@@ -6,54 +6,23 @@ const gameArea = document.getElementById("game-area");
 // Function to move the car
 function moveCar(event) {
     switch (event.key) {
-        case "w":
+        case "ArrowUp":
             if (carPosition.y > 0) {
                 carPosition.y -= moveDistance;
             }
             break;
-        case "W":
-            if (carPosition.y > moveDistance) {
-                carPosition.y -= 2*moveDistance;
-            }
-            else if (carPosition.y > 0){
-                carPosition.y -= moveDistance;
-            }
-            break;
-        case "s":
+        case "ArrowDown":
             if (carPosition.y < gameArea.clientHeight - car.clientHeight) {
                 carPosition.y += moveDistance;
             }
             break;
-        case "S":
-            if (carPosition.y < gameArea.clientHeight - car.clientHeight - moveDistance) {
-                carPosition.y += 2*moveDistance;
-            }
-            else if (carPosition.y < gameArea.clientHeight - car.clientHeight) {
-                carPosition.y += moveDistance;
-            }
-            break;
-        case "a":
+        case "ArrowLeft":
             if (carPosition.x > 0) {
                 carPosition.x -= moveDistance;
             }
             break;
-        case "A":
-            if (carPosition.x > moveDistance) {
-                carPosition.x -= 2*moveDistance;
-            }
-            else if (carPosition.x > 0) {
-                carPosition.x -= moveDistance;
-            }
-            break;
-        case "d":
+        case "ArrowRight":
             if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
-                carPosition.x += moveDistance;
-            }
-        case "D":
-            if (carPosition.x < gameArea.clientWidth - car.clientWidth - moveDistance) {
-                carPosition.x += 2*moveDistance;
-            }
-            else if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
                 carPosition.x += moveDistance;
             }
             break;
