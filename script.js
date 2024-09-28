@@ -1,5 +1,5 @@
 const car = document.getElementById("car");
-let carPosition = { x: 275, y: 150 };
+let carPosition = { x: 0, y: 0 };
 const moveDistance = 20; // Distance the car will move with each keypress
 const gameArea = document.getElementById("game-area");
 
