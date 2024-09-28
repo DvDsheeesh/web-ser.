@@ -7,56 +7,39 @@ const gameArea = document.getElementById("game-area");
 function moveCar(event) {
     switch (event.key) {
         case "w":
-            if (carPosition.y > 0) {
-                carPosition.y -= moveDistance;
-            }
+            if (carPosition.y > moveDistance) carPosition.y -= moveDistance;
+            else carPosition.y -= carPosition.y;
             break;
         case "W":
-            if (carPosition.y > moveDistance) {
-                carPosition.y -= 2*moveDistance;
-            }
-            else if (carPosition.y > 0){
-                carPosition.y -= moveDistance;
-            }
+            if (carPosition.y >= 2*moveDistance) carPosition.y -= 2*moveDistance;
+            else carPosition.y -= carPosition.y;
             break;
+
         case "s":
-            if (carPosition.y < gameArea.clientHeight - car.clientHeight) {
-                carPosition.y += moveDistance;
-            }
+            if (carPosition.y < gameArea.clientHeight - car.clientHeight) carPosition.y += moveDistance;
+            else carPosition.y += gameArea.clientHeight - car.clientHeight;
             break;
         case "S":
-            if (carPosition.y < gameArea.clientHeight - car.clientHeight - moveDistance) {
-                carPosition.y += 2*moveDistance;
-            }
-            else if (carPosition.y < gameArea.clientHeight - car.clientHeight) {
-                carPosition.y += moveDistance;
-            }
+            if (carPosition.y < gameArea.clientHeight - car.clientHeight - moveDistance) carPosition.y += 2*moveDistance;
+            else carPosition.y += carPosition.y;
             break;
+
         case "a":
-            if (carPosition.x > 0) {
-                carPosition.x -= moveDistance;
-            }
+            if (carPosition.x > moveDistance) carPosition.x -= moveDistance;
+            else carPosition.x -= carPosition.x;
             break;
         case "A":
-            if (carPosition.x >= 2*moveDistance) {
-                carPosition.x -= 2*moveDistance;
-            }
-            else if (carPosition.x > 0) {
-                carPosition.x -= carPosition.x;
-            }
+            if (carPosition.x >= 2*moveDistance) carPosition.x -= 2*moveDistance;
+            else carPosition.x -= carPosition.x;
             break;
+
         case "d":
-            if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
-                carPosition.x += moveDistance;
-            }
+            if (carPosition.x < gameArea.clientWidth - car.clientWidth) carPosition.x += moveDistance;
+            else carPosition.x += gameArea.clientWidth - car.clientWidth;
             break;
         case "D":
-            if (carPosition.x < gameArea.clientWidth - car.clientWidth - moveDistance) {
-                carPosition.x += 2*moveDistance;
-            }
-            else if (carPosition.x < gameArea.clientWidth - car.clientWidth) {
-                carPosition.x += moveDistance;
-            }
+            if (carPosition.x < gameArea.clientWidth - car.clientWidth - moveDistance) carPosition.x += 2*moveDistance;
+            else carPosition.x += carPosition.x;
             break;
     }
 
