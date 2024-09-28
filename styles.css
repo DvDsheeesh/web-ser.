@@ -1,31 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+body { /* Targets the entire body of the HTML document */
+    font-family: Arial, sans-serif; /* Sets the font for the text */
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Arranges child elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f4f4f4; /* Sets a light gray background color */
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
+h1 { /* Targets the h1 heading */
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Adds space above the heading */
 }
 
-#game-area {
-    width: 600px;
-    height: 400px;
-    background-color: #2e8b57;
-    position: relative;
-    border: 3px solid #333;
+#game-area { /* Targets the game area container by its ID */
+    width: 600px; /* Sets the width of the game area */
+    height: 400px; /* Sets the height of the game area */
+    background-color: #2e8b57; /* Sets a green background color for the game area */
+    position: relative; /* Establishes a relative positioning context for child elements */
+    border: 3px solid #333; /* Adds a dark gray border around the game area */
 }
 
-#car {
-    width: 50px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-    left: 275px; /* Start in the middle of the game area */
-    top: 150px; /* Start somewhere near the center */
+#car { /* Targets the car element by its ID */
+    width: 50px; /* Sets the width of the car */
+    height: 100px; /* Sets the height of the car */
+    background-color: red; /* Sets the car's color to red */
+    position: absolute; /* Positions the car absolutely within the game area */
+    left: 275px; /* Sets the initial horizontal position of the car */
+    top: 150px; /* Sets the initial vertical position of the car */
 }
